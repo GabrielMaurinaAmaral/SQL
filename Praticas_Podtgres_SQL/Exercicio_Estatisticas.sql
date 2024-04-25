@@ -1,6 +1,6 @@
 create table funcionarios
   (
-      idFuncionario integer,
+      id_Funcionario integer/*INT PRIMARY KEY*/,
       nome varchar(100),
       email varchar(200),
       sexo varchar(10),
@@ -8,8 +8,8 @@ create table funcionarios
       admissao varchar(12),
       salario integer,
       cargo varchar(100),
-      idRegiao int,
-      primary key (idFuncionario)
+      id_Regiao int,
+      /**/primary key (id_Funcionario)
   );
 
 insert into funcionarios values (1,'Kelley','rkelley0@soundcloud.com','Feminino','Computadores','10/2/2009',67470,'Structural Engineer',2);
@@ -1014,7 +1014,7 @@ insert into funcionarios values (999,'Kennedy','lkennedyrq@edublogs.org','Mascul
 insert into funcionarios values (1000,'Howard','showardrr@addtoany.com','Masculino','Bebês','11/7/2003',148687,'General Manager',3);
 
 -- qual a moda departamento - qual o departameno que mais emprega
---primerio fazendo a tabela pra saber o quantidade de gente de cada departamento
+-- primerio fazendo a tabela pra saber o quantidade de gente de cada departamento
 SELECT departamento, count(*) AS MODA
 FROM funcionarios
 GROUP BY departamento
