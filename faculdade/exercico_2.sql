@@ -1,0 +1,36 @@
+CREATE TABLE FUNC(
+    Codigo INTEGER NOT NULL PRIMARY KEY,
+    NOME VARCHAR(30) NOT NULL,
+    SALARIO NUMERIC(12,2),
+    GENERO CHAR(1) NOT NULL
+        CONSTRAINT GEN_M_F
+        CHECK (GENERO IN ('M','F')),
+    IDADE INTEGER,
+    UF CHAR (2),
+    CIDADE VARCHAR (40) NOT NULL,
+    EST_CIVIL CHAR (1) NOT NULL
+        CHECK (EST_CIVIL IN ('S', 'C', 'D', 'V', 'U')),
+    DATA_NASC DATE
+);
+
+INSERT INTO FUNC (CODIGO, NOME, SALARIO, GENERO, IDADE, UF, CIDADE, EST_CIVIL, DATA_NASC)
+VALUES (1, 'Carla', 5.000, 'F', 19, 'PR', 'Pato Branco', 'S','1981-11-11');
+
+INSERT INTO FUNC (CODIGO, NOME, SALARIO, GENERO, IDADE, UF, CIDADE, EST_CIVIL, DATA_NASC)
+VALUES (2, 'Carla', 5.000, 'F', 19, 'PR', 'Pato Branco', 'S','1981-11-11');
+
+INSERT INTO FUNC (CODIGO, NOME, SALARIO, GENERO, IDADE, UF, CIDADE, EST_CIVIL, DATA_NASC)
+VALUES (234, 'Ze Violla', 10.000, 'M', 30, 'RS', 'Soledade', 'C','1990-11-01');
+
+INSERT INTO FUNC (CODIGO, NOME, SALARIO, GENERO, IDADE, UF, CIDADE, EST_CIVIL, DATA_NASC)
+VALUES (10234, 'Dalessandro', 500000, 'M', 40, 'RS', 'Porto Alegre', 'C', '1981-04-06');
+
+/* EXERCICIOS */   
+DELETE FROM FUNC; 
+INSERT INTO FUNC VALUES (9, 'Rodrigo Cardoso', 1588, 'M', 25, 'SC', 'Lages', 'S', '1991-04-06');
+INSERT INTO FUNC VALUES (8, 'Maria Joaquina', 16556, 'F', 43, 'PR', 'Arapongas', 'C', '1978-05-20');
+INSERT INTO FUNC VALUES (7, 'Bastianzinho Silva', 3500, 'M', 32, 'RS', 'Passo Fundo', 'D', '1986-10-04');
+INSERT INTO FUNC VALUES (4, 'Ana Paula', 8550, 'F', 25, 'SC', 'Floripa', 'S', '1992-12-01');
+INSERT INTO FUNC VALUES (5, 'Tonico Alves', 10550, 'M', 50, 'PR', 'Pato Branco', 'V', '1970-12-25');
+INSERT INTO FUNC VALUES (6, 'Jose de Deus', 2300, 'M', 20, 'RS', 'Fontoura Xaxier', 'S', '1998-11-30');
+INSERT INTO FUNC VALUES (NULL, 'Jose de Deus', 2300, 'M', 20, 'RS', 'Fontoura Xaxier', 'S', '1998-11-30');
