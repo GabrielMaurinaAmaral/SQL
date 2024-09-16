@@ -1019,13 +1019,13 @@ SELECT departamento, count(*) AS MODA
 FROM funcionarios
 GROUP BY departamento
 ORDER BY MODA DESC;
+
 -- o primeiro sera o maior
 SELECT departamento, count(*) AS MODA
 FROM funcionarios
 GROUP BY departamento
 ORDER BY MODA DESC
 LIMIT 1;
-
 
 --qual o desvio padrão DO SALARIO de cada departamentO
 SELECT departamento, 
@@ -1034,9 +1034,7 @@ FROM funcionarios
 GROUP BY departamento
 ORDER BY DESVIO_PADRAO DESC;
 
-
 -- calcule a media salarioal de todos o set de dados
-
 SELECT ROUND(AVG(salario),2) AS MEDIA
 FROM funcionarios;
 

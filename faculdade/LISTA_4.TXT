@@ -1,0 +1,58 @@
+Ministério da Educação
+UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ
+Câmpus Pato Branco	 
+
+
+
+Lista de Exercícios 04 – Banco de Dados I
+Álgebra Relacional
+Marcelo Teixeira
+
+Floricultura: estruture logicamente o BD de uma floricultura. Leia os enunciados abaixo e projete como seriam as estruturas de dados que pudessem ser coerentes com os enunciados.
+NOTA: não é importante aqui se preocupar com a estruturação do banco. Por exemplo, em: selecione o código e a cidade. Que código e que cidade, se eu não forneci o esquema? Não importa, assuma que existe o esquema e nele há os atributos código e cidade. A preocupação aqui é de estruturação das consultas e na forma correta de arquitetá-las, não no esquema. 
+
+ARs básicos (com projeção e seleção não integrados e esquema com entidade única):
+1)	Selecione todos os dados dos clientes da floricultura (percebe a falta de algum recurso SQL?)
+2)	Selecione o nome de todos os clientes da floricultura
+3)	Selecione o nome e a cidade onde moram todos os clientes da floricultura
+4)	Selecione todos os dados dos clientes da floricultura cujo aniversário seja em abril, pois a floricultura pretende aplicar uma política de divulgação e promoções
+5)	Selecione todas as clientes mulher da floricultura, que vão receber uma orquídea de brinde do dia da mulher
+6)	Retorne todos os clientes cujo status registrado no seu cadastro seja ‘devedor’
+7)	Retorne todos os clientes cujo sexo seja masculino, o estado civil seja casado e o salário seja de mais de 10 mil reais, pois sabe-se que eles presenteiam as esposas com flores (culpa?)
+8)	Retorne uma lista de clientes cujo estado civil seja solteiro, ou divorciado, e que a profissão seja aluno, pois sabe-se que esses nunca presenteiam com flores 
+9)	Retorne uma lista dos clientes que já comparam na floricultura antes
+10)	Retorne uma lista dos clientes que já comparam na floricultura antes, mas que não tenham comprados nos últimos 12 meses, pois a floricultura tentará resgatá-los como clientes.
+   
+
+ARs básicos (com projeção e seleção integrados e esquema relacionado):
+1)	Selecionar o nome e código da cidade quando o código for maior que 2 e o estado for 1
+2)	Mostrar o valor do salário dos funcionários que possuem salário superior a 2000 reais
+3)	Selecionar o código, o valor, a data e o fornecedor das compras com o valor superior a mil reais
+4)	Mostrar o código e o nome da transportadora, a data da saída e da entrega do produto em que o código da transportadora for superior a 85 e o valor do pedido for superior a 50 reais (T x P)
+5)	Traga uma lista de telefones de clientes, acompanhada do nome do cliente. Mostre apenas os registros em que o telefone é residencial, para avaliar a forma de entrega
+
+
+ARs com funções:
+6)	Verifique quantos clientes a floricultura possui 
+7)	Verifique quantos clientes a floricultura possui em cada bairro 
+8)	Mostre a média salarial dos funcionários desta floricultura
+9)	Mostre a média salarial dos funcionários desta floricultura, agrupados por sexo
+10)	 Conte quantos clientes a floricultura possui na rua das “Meninas Super Poderosas”
+11)	 Qual a média de faturamento dos pedidos da floricultura em 2019
+12)	 Qual a média de faturamento dos pedidos da floricultura entre 2015 e 2019
+13)	 Qual o maior, o menor, a média e a quantidade de pedidos em 2019
+
+
+ARs com junções:
+14)	 Usando JOIN, selecione o nome de todos os funcionários da floricultura e o nome de seu cargo. A consulta deve incidir sobre todos e apenas os funcionários que possuem um cargo cadastrado
+15)	 Repita a consulta anterior, agora usando produto cartesiano
+16)	 Selecione o nome de todos os funcionários da floricultura e, se ele tiver um cargo, mostre o nome do cargo
+17)	 Selecione o nome de todos os funcionários da floricultura e o nome do seu cargo. A consulta deve mostrar todos os funcionários e todos os cargos, independentemente de vínculo entre eles 
+
+
+ARs com atribuições:
+18)	 Contrate um funcionário para a floricultura 
+19)	 Conceda um aumento de salário para o funcionário recém contratado
+20)	 Incremente em 100 reais o salário dos funcionários que ganham menos que 1.500 reais
+21)	 Demita o funcionário recém contratado
+22)	 Exclua os clientes da floricultura que moram na rua das “Meninas Super Poderosas”, pois a floricultura deixou de atender nesse local.

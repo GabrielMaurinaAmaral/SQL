@@ -1,0 +1,1 @@
+Variaveis_mapeamento_0.csv
